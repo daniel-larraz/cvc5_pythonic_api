@@ -6024,7 +6024,7 @@ class Solver(object):
 
     def initFromLogic(self):
         """Create the base-API solver from the logic"""
-        self.solver = pc.Solver()
+        self.solver = pc.Solver(pc.TermManager())
         if self.logic is not None:
             self.solver.setLogic(self.logic)
         self.solver.setOption("produce-models", "true")
